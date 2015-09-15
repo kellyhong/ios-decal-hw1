@@ -19,7 +19,7 @@ class Foo {
         wordB = words[1]!
     }
     
-//: The correct way to unwrap optionals is using !. The words array is an array of optionals.
+//: Explanation: The correct way to unwrap optionals is using ! for wordA and wordB. The words array is an array of optionals.
     
 
     
@@ -39,8 +39,8 @@ class Foo {
         return true
     }
     
-//: We need to change let to var because var declares a regular variable, while let declares a constant variable. You also have to
-//: We should return true instead of nil because this is not a function that returns an optional
+//: Explanation: We need to change let to var in the for loop because var declares a regular variable, while let declares a constant variable.
+//: We should return true instead of nil at the last return value because this is not a function that returns an optional, so it can't return nil.
     
     
     
@@ -86,7 +86,8 @@ class Foo {
     }
 }
 
-//: We need to put "class" in front of class methods. Also, I corrected the syntax for initializing the dictionary.
+//: Explanation: We need to put "class" in front of class methods, so I did that for
+// the isAnagram fucntion and the arePalindromes function. Also, I corrected the syntax for initializing the dictionary countLetters.
 
 
 //: **Do not** change anything below.
