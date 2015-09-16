@@ -19,7 +19,7 @@ class Foo {
         wordB = words[1]!
     }
     
-//: Explanation: The correct way to unwrap optionals is using ! for wordA and wordB. The words array is an array of optionals.
+//: Explanation: The correct way to unwrap optionals is using ! for wordA and wordB, and we do this because the words array is an array of optionals.
     
 
     
@@ -49,8 +49,8 @@ class Foo {
 //: Are we initializing the dictionary correctly?
     class func isAnagram(wordA: String, wordB: String) -> Bool? {
         var countLetters = Dictionary<Character, Int>()
-        var lenA = wordA.characters.count
-        var lenB = wordB.characters.count
+        let lenA = wordA.characters.count
+        let lenB = wordB.characters.count
         
         if lenA != lenB {
             return false
@@ -76,7 +76,7 @@ class Foo {
             }
         }
         
-        for (letter, count) in countLetters {
+        for (_, count) in countLetters {
             if count != 0 {
                 return false
             }
@@ -87,7 +87,9 @@ class Foo {
 }
 
 //: Explanation: We need to put "class" in front of class methods, so I did that for
-// the isAnagram fucntion and the arePalindromes function. Also, I corrected the syntax for initializing the dictionary countLetters.
+//: the isAnagram function and the arePalindromes function. Also, I corrected the syntax for initializing the dictionary countLetters.
+//: Since variables lenA and lenB were never changed, I changed the var to let.
+//: I also replaced "letter" in the for loop "for (letter, count) in countLetters" to "_" because we never use "letter" in the loop
 
 
 //: **Do not** change anything below.
